@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="MauiCameraMauiSample.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Fill"
+            HorizontalOptions="Fill">
+
+            <cv:CameraView x:Name="cameraView" WidthRequest="400" HeightRequest="400"
+                           CamerasLoaded="cameraView_CamerasLoaded"/>
+
+            <Button Text="Cevap Kağıdını Çek" Clicked="Btn_Take_Image" />
+            <Button Text="Cevap Kağıdını Yükle" Clicked="UploadImage_Clicked" />
+
+            <Image x:Name="lastImage" WidthRequest="400" HeightRequest="400" />
+
+            <Button Text="Puanla" Clicked="Btn_Calculate_Score" />
+            <Button Text="Cevap Kağıdı Ayarla" Clicked="Btn_Set_Answers" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
